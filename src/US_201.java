@@ -5,12 +5,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
 public class US_201 extends BaseDriver {
  //Todo : Testi çalıştırmak istiyorsanız lütfen String 'email' kısmını güncelleyiniz(kullanılmayan bir email olmasına dikkat) :)
 
     @Test
-    public void positiveRegisterUser(){
+    public void positiveRegisterUserTest(){
         String firstname="Team6";
         String lastname="Group";
         String email="demoweb@gmail.com";
