@@ -10,7 +10,7 @@ public class US_201 extends BaseDriver {
  //Todo : Testi çalıştırmak istiyorsanız lütfen String 'email' kısmını güncelleyiniz(kullanılmayan bir email olmasına dikkat) :)
 
     @Test
-    public void Test1(){
+    public void positiveRegisterUser(){
         String firstname="Team6";
         String lastname="Group";
         String email="demoweb@gmail.com";
