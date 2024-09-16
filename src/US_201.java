@@ -9,13 +9,11 @@ import org.openqa.selenium.interactions.Actions;
 import java.sql.Driver;
 
 public class US_201 extends BaseDriver {
- //Todo : Testi çalıştırmak istiyorsanız lütfen String 'email' kısmını güncelleyiniz (kullanılmayan bir email olmasına dikkat) :)
 
     @Test
     public void positiveRegisterUserTest(){
         String firstname="Team6";
         String lastname="Group";
-        String email="bootcamp@gmail.com";
         String password="team61234";
 
         driver.get("https://demowebshop.tricentis.com/");
@@ -39,7 +37,7 @@ public class US_201 extends BaseDriver {
         MyFunc.Wait(2);
 
         WebElement emailButton=driver.findElement(By.cssSelector("[name='Email']"));
-        actions.moveToElement(emailButton).click().sendKeys(email).build().perform();
+        actions.moveToElement(emailButton).click().sendKeys("team"+((int)Math.random()*10000)+"@gmail.com").build().perform();
         MyFunc.Wait(2);
 
         WebElement passwordButton=driver.findElement(By.xpath("(//input[@type='password'])[1]"));
