@@ -10,7 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 public class US_208 extends BaseDriver {
 
     @Test
-    public void GiftCardNegativeTest(){
+    public void giftCardNegativeTest(){
 
         driver.get("https://demowebshop.tricentis.com/");
         MyFunc.Wait(2);
