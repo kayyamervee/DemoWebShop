@@ -6,13 +6,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import java.sql.Driver;
-
-public class US_201 extends BaseDriver {
- //Todo : Testi çalıştırmak istiyorsanız lütfen String 'email' kısmını güncelleyiniz (kullanılmayan bir email olmasına dikkat) :)
+public class US_202 extends BaseDriver {
+    //Todo : Testi çalıştırmak ve doğru sonuç almak için daha öncesinde kaydı bulunan e-mail kullanmalısınız :)
 
     @Test
-    public void positiveRegisterUserTest(){
+    public void negativeRegisterUserTest(){
+
         String firstname="Team6";
         String lastname="Group";
         String email="bootcamp@gmail.com";
@@ -54,8 +53,8 @@ public class US_201 extends BaseDriver {
         actions.moveToElement(register).click().build().perform();
         MyFunc.Wait(2);
 
-        WebElement confirmationMessage=driver.findElement(By.xpath("//div[@class='result']"));
-        Assert.assertTrue("Kaydınız oluşturalamadı, lütfen tekrar deneyiniz", confirmationMessage.getText().contains("completed"));
+        WebElement errorMessage=driver.findElement(By.xpath("//div[@class='message-error']//ul//li"));
+        Assert.assertTrue("Kaydınız başarıyla gerçekleşmiştir.", errorMessage.getText().contains("The specified email already exists"));
 
         tearDown();
     }
