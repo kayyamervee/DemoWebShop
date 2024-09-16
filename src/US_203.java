@@ -13,23 +13,24 @@ public class US_203 extends BaseDriver {
 
         driver.get("https://demowebshop.tricentis.com/");
         MyFunc.Wait(2);
+        Actions actions=new Actions(driver);
 
         WebElement logIn=driver.findElement(By.cssSelector("li>a[href='/login' ]"));
-        new Actions(driver).click(logIn).build().perform();
+        actions.click(logIn).build().perform();
         MyFunc.Wait(2);
 
         String email="kayaamerve01@gmail.com";
         WebElement emailBox=driver.findElement(By.xpath("//div[@class='inputs' ]//input[@type='text']"));
-        new Actions(driver).moveToElement(emailBox).click().sendKeys(email).build().perform();
+        actions.moveToElement(emailBox).click().sendKeys(email).build().perform();
         MyFunc.Wait(2);
 
         String password="Team6merve";
         WebElement passwordBox=driver.findElement(By.cssSelector("div[class='inputs' ]>:nth-child(2)[type='password' ]"));
-        new Actions(driver).moveToElement(passwordBox).click().sendKeys(password).build().perform();
+        actions.moveToElement(passwordBox).click().sendKeys(password).build().perform();
         MyFunc.Wait(2);
 
         WebElement loginBox=driver.findElement(By.xpath("(//input[@type='submit' ])[2]"));
-        new Actions(driver).click(loginBox).build().perform();
+        actions.click(loginBox).build().perform();
         MyFunc.Wait(2);
 
         WebElement visibleUsername=driver.findElement(By.xpath("(//div[@class='header-links' ])//a[@class='account' ]"));
@@ -37,7 +38,7 @@ public class US_203 extends BaseDriver {
         Assert.assertTrue("Kullanıcı adı doğru değil!",visibleUsername.getText().contains(email));
 
         WebElement logoutButton=driver.findElement(By.xpath("//a[text()='Log out' ]"));
-        new Actions(driver).click(logoutButton).build().perform();
+        actions.click(logoutButton).build().perform();
         MyFunc.Wait(2);
 
         WebElement logInText=driver.findElement(By.xpath("//a[text()='Log in' ]"));
