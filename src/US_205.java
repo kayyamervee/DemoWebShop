@@ -147,4 +147,24 @@ public class US_205 extends BaseDriver {
 
         tearDown();
     }
+
+    @Test
+    public void emailNullPasswordNull(){
+        driver.get("https://demowebshop.tricentis.com/");
+        wait.until(ExpectedConditions.urlToBe("https://demowebshop.tricentis.com/"));
+
+        WebElement logIn=driver.findElement(By.cssSelector("[class='ico-login']"));
+        wait.until(ExpectedConditions.elementToBeClickable(logIn));
+        new Actions(driver).click(logIn).build().perform();
+
+        WebElement logInClick=driver.findElement(By.xpath("(//div[@class='buttons'])[3]//input"));
+        wait.until(ExpectedConditions.elementToBeClickable(logInClick));
+        new Actions(driver).click(logInClick).build().perform();
+
+        WebElement logInMassageControl=driver.findElement(By.xpath("//div[@class='message-error']//ul//li"));
+        wait.until(ExpectedConditions.visibilityOf(logInMassageControl));
+        Assert.assertTrue("Mesaj görüntülenemedi",logInMassageControl.getText().contains("The credentials provided are incorrect"));
+
+        tearDown();
+    }
 }
