@@ -17,17 +17,14 @@ public class US_204 extends BaseDriver {
 
         driver.get("https://demowebshop.tricentis.com/");
         wait.until(ExpectedConditions.urlToBe("https://demowebshop.tricentis.com/"));
-        Actions actions=new Actions(driver);
 
         WebElement logIn=driver.findElement(By.cssSelector("[class='ico-login']"));
         wait.until(ExpectedConditions.elementToBeClickable(logIn));
-        actions.click(logIn).build().perform();
-
+        new Actions(driver).click(logIn).build().perform();
 
         WebElement email=driver.findElement(By.cssSelector("[class='email']"));
         wait.until(ExpectedConditions.visibilityOf(email));
         email.sendKeys(emailStr);
-
 
         WebElement password=driver.findElement(By.cssSelector("[class='password']"));
         wait.until(ExpectedConditions.visibilityOf(password));
@@ -35,7 +32,7 @@ public class US_204 extends BaseDriver {
 
         WebElement logInClick=driver.findElement(By.xpath("(//div[@class='buttons'])[3]//input"));
         wait.until(ExpectedConditions.elementToBeClickable(logInClick));
-        actions.click(logInClick).build().perform();
+        new Actions(driver).click(logInClick).build().perform();
 
         WebElement logInControl=driver.findElement(By.xpath("(//a[@class='account'])[1]"));
         Assert.assertTrue("Giriş başarısız...",logInControl.getText().contains("Auser"));
