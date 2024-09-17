@@ -30,20 +30,20 @@ public class US_201 extends BaseDriver {
         WebElement firstName=driver.findElement(By.cssSelector("[name='FirstName']"));
         actions.moveToElement(firstName).click().sendKeys(firstname).build().perform();
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='LastName']")));
         WebElement lastName=driver.findElement(By.cssSelector("[name='LastName']"));
-        wait.until(ExpectedConditions.visibilityOf(lastName));
         actions.moveToElement(lastName).click().sendKeys(lastname).build().perform();
 
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='Email']")));
         WebElement emailButton=driver.findElement(By.cssSelector("[name='Email']"));
-        wait.until(ExpectedConditions.visibilityOf(emailButton));
         emailButton.sendKeys("test"+(int)(Math.random()*10000)+"@gmail.com");
 
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@type='password'])[1]")));
         WebElement passwordButton=driver.findElement(By.xpath("(//input[@type='password'])[1]"));
-        wait.until(ExpectedConditions.visibilityOf(passwordButton));
         actions.moveToElement(passwordButton).click().sendKeys(password).build().perform();
 
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[name='ConfirmPassword']")));
         WebElement confirmPassword=driver.findElement(By.cssSelector("[name='ConfirmPassword']"));
-        wait.until(ExpectedConditions.visibilityOf(confirmPassword));
         actions.moveToElement(confirmPassword).click().sendKeys(password).build().perform();
 
         wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[name='register-button']")));
