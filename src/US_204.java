@@ -1,10 +1,11 @@
 import Utility.BaseDriver;
-import Utility.MyFunc;
+
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class US_204 extends BaseDriver {
 
@@ -15,22 +16,25 @@ public class US_204 extends BaseDriver {
         String passwordStr="Earnq123**";
 
         driver.get("https://demowebshop.tricentis.com/");
-        MyFunc.Wait(1);
+        wait.until(ExpectedConditions.urlToBe("https://demowebshop.tricentis.com/"));
         Actions actions=new Actions(driver);
 
         WebElement logIn=driver.findElement(By.cssSelector("[class='ico-login']"));
+        wait.until(ExpectedConditions.elementToBeClickable(logIn));
         actions.click(logIn).build().perform();
-        MyFunc.Wait(1);
+
 
         WebElement email=driver.findElement(By.cssSelector("[class='email']"));
+        wait.until(ExpectedConditions.visibilityOf(email));
         email.sendKeys(emailStr);
-        MyFunc.Wait(1);
+
 
         WebElement password=driver.findElement(By.cssSelector("[class='password']"));
+        wait.until(ExpectedConditions.visibilityOf(password));
         password.sendKeys(passwordStr);
-        MyFunc.Wait(1);
 
         WebElement logInClick=driver.findElement(By.xpath("(//div[@class='buttons'])[3]//input"));
+        wait.until(ExpectedConditions.elementToBeClickable(logInClick));
         actions.click(logInClick).build().perform();
 
         WebElement logInControl=driver.findElement(By.xpath("(//a[@class='account'])[1]"));
