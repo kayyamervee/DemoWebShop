@@ -10,11 +10,12 @@ public class BaseDriver {
     public static WebDriverWait wait;
 
     static {
-        wait=new WebDriverWait(driver,Duration.ofSeconds(20));
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+        wait=new WebDriverWait(driver,Duration.ofSeconds(20));
     }
 
     public static void tearDown() {
