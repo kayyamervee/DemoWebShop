@@ -21,15 +21,17 @@ public class US_202 extends BaseDriver {
         driver.get("https://demowebshop.tricentis.com/");
         Actions actions=new Actions(driver);
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='header-links']//a)[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='header-links']//a)[1]")));
         WebElement registerButton=driver.findElement(By.xpath("(//div[@class='header-links']//a)[1]"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='header-links']//a)[1]")));
         actions.moveToElement(registerButton).click().build().perform();
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='gender']//input)[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='gender']//input)[1]")));
         WebElement genderMale=driver.findElement(By.xpath("(//div[@class='gender']//input)[1]"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='gender']//input)[1]")));
         actions.moveToElement(genderMale).click().build().perform();
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[name='FirstName']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='FirstName']")));
         WebElement firstName=driver.findElement(By.cssSelector("[name='FirstName']"));
         actions.moveToElement(firstName).click().sendKeys(firstname).build().perform();
 
@@ -41,19 +43,20 @@ public class US_202 extends BaseDriver {
         WebElement emailButton=driver.findElement(By.cssSelector("[name='Email']"));
         actions.moveToElement(emailButton).click().sendKeys(email).build().perform();
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//input[@type='password'])[1]")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//input[@type='password'])[1]")));
         WebElement passwordButton=driver.findElement(By.xpath("(//input[@type='password'])[1]"));
         actions.moveToElement(passwordButton).click().sendKeys(password).build().perform();
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[name='ConfirmPassword']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='ConfirmPassword']")));
         WebElement confirmPassword=driver.findElement(By.cssSelector("[name='ConfirmPassword']"));
         actions.moveToElement(confirmPassword).click().sendKeys(password).build().perform();
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[name='register-button']")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='register-button']")));
         WebElement register=driver.findElement(By.cssSelector("[name='register-button']"));
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[name='register-button']")));
         actions.moveToElement(register).click().build().perform();
 
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='message-error']//ul//li")));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='message-error']//ul//li")));
         WebElement errorMessage=driver.findElement(By.xpath("//div[@class='message-error']//ul//li"));
         Assert.assertTrue("Kaydınız başarıyla gerçekleşmiştir.", errorMessage.getText().contains("The specified email already exists"));
 
