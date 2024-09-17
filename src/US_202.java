@@ -53,6 +53,7 @@ public class US_202 extends BaseDriver {
         WebElement register=driver.findElement(By.cssSelector("[name='register-button']"));
         actions.moveToElement(register).click().build().perform();
 
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@class='message-error']//ul//li")));
         WebElement errorMessage=driver.findElement(By.xpath("//div[@class='message-error']//ul//li"));
         Assert.assertTrue("Kaydınız başarıyla gerçekleşmiştir.", errorMessage.getText().contains("The specified email already exists"));
 
