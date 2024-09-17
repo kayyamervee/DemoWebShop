@@ -163,7 +163,7 @@ public class US_205 extends BaseDriver {
 
         WebElement logInMassageControl=driver.findElement(By.xpath("//div[@class='message-error']//ul//li"));
         wait.until(ExpectedConditions.visibilityOf(logInMassageControl));
-        Assert.assertTrue("Mesaj görüntülenemedi",logInMassageControl.getText().contains("The credentials provided are incorrect"));
+        Assert.assertTrue("Mesaj görüntülenemedi",logInMassageControl.getText().contains("No customer account found"));
 
         tearDown();
     }
