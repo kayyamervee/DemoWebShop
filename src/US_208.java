@@ -11,7 +11,6 @@ public class US_208 extends BaseDriver {
 
     @Test
     public void giftCardNegativeTest() {
-
         String name="Merve Kaya";
         String email = "kayaamerve01@gmail.com";
         String password = "Team6merve";
@@ -97,7 +96,6 @@ public class US_208 extends BaseDriver {
         WebElement cargoInfoFunc = driver.findElement(By.xpath("//div[@class='estimate-shipping' ]"));
 
         if (cargoInfoFunc.isDisplayed()) {
-
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//select[@id='CountryId' ]")));
             WebElement cargoInfoCountry = driver.findElement(By.xpath("//select[@id='CountryId' ]"));
             wait.until(ExpectedConditions.elementToBeClickable(cargoInfoCountry));
