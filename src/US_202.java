@@ -11,7 +11,6 @@ public class US_202 extends BaseDriver {
 
     @Test
     public void negativeRegisterUserTest(){
-
         String firstname="Team6";
         String lastname="Group";
         String email="bootcamp@gmail.com";
