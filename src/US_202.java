@@ -1,5 +1,4 @@
 import Utility.BaseDriver;
-import Utility.MyFunc;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -12,7 +11,6 @@ public class US_202 extends BaseDriver {
 
     @Test
     public void negativeRegisterUserTest(){
-
         String firstname="Team6";
         String lastname="Group";
         String email="bootcamp@gmail.com";
@@ -23,12 +21,12 @@ public class US_202 extends BaseDriver {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='header-links']//a)[1]")));
         WebElement registerButton=driver.findElement(By.xpath("(//div[@class='header-links']//a)[1]"));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='header-links']//a)[1]")));
+        wait.until(ExpectedConditions.elementToBeClickable(registerButton));
         actions.moveToElement(registerButton).click().build().perform();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//div[@class='gender']//input)[1]")));
         WebElement genderMale=driver.findElement(By.xpath("(//div[@class='gender']//input)[1]"));
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//div[@class='gender']//input)[1]")));
+        wait.until(ExpectedConditions.elementToBeClickable(genderMale));
         actions.moveToElement(genderMale).click().build().perform();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='FirstName']")));
@@ -53,7 +51,7 @@ public class US_202 extends BaseDriver {
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[name='register-button']")));
         WebElement register=driver.findElement(By.cssSelector("[name='register-button']"));
-        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[name='register-button']")));
+        wait.until(ExpectedConditions.elementToBeClickable(register));
         actions.moveToElement(register).click().build().perform();
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='message-error']//ul//li")));
