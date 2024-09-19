@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 public class US_208 extends BaseDriver {
-
     @Test
     public void giftCardNegativeTest() {
         String name="Merve Kaya";
