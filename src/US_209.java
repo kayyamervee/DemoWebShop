@@ -6,10 +6,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class US_204 extends BaseDriver {
+import java.awt.*;
 
+public class US_209 extends BaseDriver {
     @Test
-    public void loginPositive() {
+    public void downloadingOrderHistory() throws AWTException {
         String emailStr = "Auser@gmail.com";
         String passwordStr = "Earnq123**";
 
@@ -39,6 +40,22 @@ public class US_204 extends BaseDriver {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("(//a[@class='account'])[1]")));
         WebElement logInControl = driver.findElement(By.xpath("(//a[@class='account'])[1]"));
         Assert.assertTrue("Giriş başarısız...", logInControl.getText().contains("Auser"));
+        logInControl.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//a[@class='inactive'])[2]")));
+        WebElement ordersClick = driver.findElement(By.xpath("(//a[@class='inactive'])[2]"));
+        wait.until(ExpectedConditions.elementToBeClickable(ordersClick));
+        ordersClick.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[class='button-2 order-details-button']")));
+        WebElement detailsBtn = driver.findElement(By.cssSelector("[class='button-2 order-details-button']"));
+        wait.until(ExpectedConditions.elementToBeClickable(detailsBtn));
+        detailsBtn.click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("[class='button-2 pdf-order-button']")));
+        WebElement pdfOrderBtn = driver.findElement(By.cssSelector("[class='button-2 pdf-order-button']"));
+        wait.until(ExpectedConditions.elementToBeClickable(pdfOrderBtn));
+        pdfOrderBtn.click();
 
         tearDown();
     }
