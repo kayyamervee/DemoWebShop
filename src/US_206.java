@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class US_206 extends BaseDriver {
+
     @Test
     public void Test1() {
         String emailStr="Auser"+(int)(Math.random()*100)+"@gmail.com";
