@@ -10,7 +10,7 @@ import java.awt.*;
 
 public class US_209 extends BaseDriver {
     @Test
-    public void downloadingOrderHistory() throws AWTException {
+    public void downloadingOrderHistory() {
         String emailStr = "Auser@gmail.com";
         String passwordStr = "Earnq123**";
 
