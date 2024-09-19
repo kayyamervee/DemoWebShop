@@ -7,8 +7,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class US_202 extends BaseDriver {
-    //Todo : Testi çalıştırmak ve doğru sonuç almak için daha öncesinde kaydı bulunan e-mail kullanmalısınız :)
-
     @Test
     public void negativeRegisterUserTest(){
         String firstname="Team6";
