@@ -1,5 +1,7 @@
 # Agile Software Testing Project - DemoWebShop
 
+### * This project is for educational purposes and is intended to help participants test their own skills.
+
 This project provides a comprehensive user management system for a web store, encompassing features such as user registration, login/logout functionality, order placement, survey responses, and order history downloads.
 
 ## Table of Contents
@@ -24,6 +26,7 @@ This project provides a comprehensive user management system for a web store, en
 This project aims to enhance the shopping experience by providing a user-friendly interface for managing user accounts and transactions on a web store. The following sections detail the key functionalities and scenarios supported by this system.
 
 ## Features
+
 ### 1.User Registration - (US_201)
 
 This feature allows users to create an account on the web store.
@@ -36,10 +39,6 @@ This feature allows users to create an account on the web store.
 
 3.	Submit the registration form.
    
-**Acceptance Criteria:**
-
-A success message should confirm the registration.
-
 ### 2.Negative User Registration - (US_202)
 
 Ensures that users cannot register with an email address that is already in use.
@@ -48,10 +47,6 @@ Ensures that users cannot register with an email address that is already in use.
 
 Attempt to register with an existing email address.
 
-**Acceptance Criteria:**
-
-Display the message "The specified email address is already in use."
-
 ### 3.Logout - (US_203)
 
 Enables users to log out of their accounts securely.
@@ -59,10 +54,6 @@ Enables users to log out of their accounts securely.
 **Requirements:**
 
 Perform the logout action from the user account.
-
-**Acceptance Criteria:**
-
-Redirect the user to the login page after successful logout.
 
 ### 4.Login - (US_204)
 
@@ -74,10 +65,6 @@ Allows users to access their accounts by entering valid credentials.
 
 2.	Enter a valid email and password.
 
-**Acceptance Criteria:**
-
-Grant access to the user's account dashboard upon successful login.
-
 ### 5.Negative Login Scenarios - (US_205)
 
 Tests various scenarios to ensure robust security during the login process.
@@ -85,10 +72,6 @@ Tests various scenarios to ensure robust security during the login process.
 **Requirements:**
 
 Attempt login with empty fields or incorrect credentials.
-
-**Acceptance Criteria:**
-
-Show "Login Failed" message for each invalid attempt.
 
 ### 6.Order Placement - (US_206)
 
@@ -102,10 +85,6 @@ Facilitates the purchasing process by allowing users to place orders using credi
 
 3.Complete the payment process.
 
-**Acceptance Criteria:**
-
-Display the message "Your order has been successfully processed!"
-
 ### 7.Survey Response - (US_207)
 
 Enables users to participate in surveys to provide feedback on their shopping experience.
@@ -113,10 +92,6 @@ Enables users to participate in surveys to provide feedback on their shopping ex
 **Requirements:**
 
 Access the survey section and select a response option.
-
-**Acceptance Criteria:**
-
-If not logged in, show "Only registered users can vote." If logged in, display survey results after submission.
 
 ### 8.Negative Coupon and Gift Card Usage - (US_208)
 
@@ -126,10 +101,6 @@ Checks how the system handles situations where no coupons or gift cards are avai
 
 Attempt to apply a coupon or gift card that does not exist.
 
-**Acceptance Criteria:**
-
-Display appropriate messages indicating that no valid coupon or gift card is available.
-
 ### 9.Download Order History - (US_209)
 
 Allows users to view and download invoices for their past orders.
@@ -137,10 +108,6 @@ Allows users to view and download invoices for their past orders.
 **Requirements:**
 
 Log into the user account and navigate to the order history section.
-
-**Acceptance Criteria:**
-
-Provide options to download invoices for selected orders.
 
 ## Test Environment
 
