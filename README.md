@@ -33,11 +33,11 @@ This feature allows users to create an account on the web store.
 
 **Requirements:**
 
-1.	Click on the "Register" button.
+**1.** Click on the "Register" button.
 
-2.	Fill in the required fields: First Name, Last Name, Gender, Email, Password, and Password Confirmation.
+**2.** Fill in the required fields: First Name, Last Name, Gender, Email, Password, and Password Confirmation.
 
-3.	Submit the registration form.
+**3.** Submit the registration form.
    
 ### 2.Negative User Registration - (US_202)
 
@@ -61,9 +61,9 @@ Allows users to access their accounts by entering valid credentials.
 
 **Requirements:**
 
-1.	Click on the "Login" button.
+**1.** Click on the "Login" button.
 
-2.	Enter a valid email and password.
+**2.** Enter a valid email and password.
 
 ### 5.Negative Login Scenarios - (US_205)
 
@@ -79,11 +79,11 @@ Facilitates the purchasing process by allowing users to place orders using credi
 
 **Requirements:**
 
-1.Select a product and add it to the cart.
+**1.** Select a product and add it to the cart.
 
-2.Provide shipping information and agree to terms.
+**2.** Provide shipping information and agree to terms.
 
-3.Complete the payment process.
+**3.** Complete the payment process.
 
 ### 7.Survey Response - (US_207)
 
