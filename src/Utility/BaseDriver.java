@@ -23,7 +23,3 @@ public class BaseDriver {
         driver.quit();
     }
 }
-/**
-// Bu class içerisinde değişiklik yapmıyoruz.
-// Testlerimizin sonunda tearDown u kullanıyoruz.(bekle ve kapat komutu birlikte olduğu için)
- */
