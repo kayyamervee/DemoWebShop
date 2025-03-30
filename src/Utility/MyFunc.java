@@ -10,7 +10,3 @@ public class MyFunc {
         }
     }
 }
-/**
- // Bu class içerisinde değişiklik yapmıyoruz.
- // Bekleme komutlarında Wait i kullanıyoruz.
- */
